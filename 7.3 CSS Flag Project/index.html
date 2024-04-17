@@ -5,7 +5,44 @@
   <meta charset="UTF-8">
   <title>CSS Flag Project</title>
   <style>
-    /* Write your CSS Code here */
+    :root {
+      --main-color: red;
+      --secondary-color: blue;
+    }
+    html {
+      text-align: center;
+      font-size: 60px;
+    }
+    .flag {
+      width: 900px;
+      height: 600px;
+      color: white;
+      background-color: var(--main-color);
+      position: relative;
+    }
+    .flag > div {
+      background-color: var(--secondary-color);
+      height: 50%;
+      width: 100%;
+      top: 25%;
+      position: absolute;
+    }
+    .flag > div > div{
+      background-color: white;
+      width: 150px;
+      margin: auto;
+      position: absolute;
+      top: 25%;
+      left: 375px;
+      height: 50%;
+      border-radius: 50%;
+    }
+    .flag > div > div > p {
+      color: black;
+      position: relative;
+      padding: 0;
+      margin: 0;
+    }
     
   </style>
 </head>
