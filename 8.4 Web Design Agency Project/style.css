@@ -6,16 +6,54 @@ body {
   flex-direction: column;
   min-height: 95vh;
 }
+img {
+  width: 75vw;
+}
+img.logo {height: 25px; width: 90px;}
 .main {
   flex: 1;
 }
 
 h1 {
+  clear: both;
   font-size: 5rem;
+  text-align: center;
+}
+#creative {
+  color: midnightblue;
 }
 
 footer {
   text-align: right;
   color: midnightblue;
+}
+@media (min-width: 1100px) {
+  h1 {
+    width: 50%;
+    text-align: left;
+  }
+  img {
+    height: 200px;
+    width: auto;
+    float: left;
+    margin: 20px
+  }
+  .logo {
+    width:263px;
+    height: 46px;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+  div.card.left {
+    float: left;
+    width: 50%;
+  }
+  div.card.right {
+    float: right;
+    width: 50%;
+  }
+  footer {
+    clear: both;
+  }
 }
 
