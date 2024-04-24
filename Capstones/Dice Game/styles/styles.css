@@ -1,0 +1,36 @@
+html {
+    text-align: center;
+    background-color: #FF76CE;
+}
+h1 {
+    font-size: 3rem;
+    color: #FDFFC2;text-shadow: 
+    2px 2px 4px black;
+    font-family: "Lobster Two", sans-serif;
+}
+h2 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px black;
+    color: #94FFD8;
+    font-family: "Overpass", sans-serif;
+}
+.container {
+    display: flex;
+}
+#main {
+    justify-content: center;
+}
+#content {
+    width: 50%;
+    flex-direction: column;
+}
+.dice {
+    flex-direction: column;
+    background-color: #A3D8FF;
+    padding: 8px;
+    margin: 12px;
+    border-radius: 12px;
+}
+#dice-container {
+    justify-content: space-evenly;
+}
