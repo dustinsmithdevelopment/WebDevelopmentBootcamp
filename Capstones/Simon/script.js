@@ -17,7 +17,7 @@ let soundList = {
 };
 
 
-function startGame(){
+function resetGame(){
     currentIndex = 0;
     currentLevel = 1;
     simonPrompt = [];
@@ -49,15 +49,14 @@ function addColor(){
 function showPrompt(){
     showLevel();
     clickAllowed = false;
-    // Make the function asynchronous
     async function triggerColors() {
         for (const color of simonPrompt) {
-            // Wait for each alertColor call to finish
             await alertColor(color, 500);
         }
         clickAllowed = true;
     }
-    triggerColors();
+
+    setTimeout(triggerColors, 500);
 }
 
 function alertColor(color, time) {
@@ -82,27 +81,19 @@ function nextLevel(){
     showPrompt();
 }
 function gameOver(){
-    $("h1").text("Game Over! Press any button to restart.");
+    $("h1").text('Game Over! Press "r" button to restart.');
     gameActive = false;
 }
 $(".color-section").on("click",function() {
-    
-
-    if (clickAllowed){
+    if (clickAllowed && gameActive){
         alertColor($(this).attr("id"), 100);
-        // start the game if it isn't active
-        sleep(1010).then(()=>{
-            if (gameActive === false){
-                startGame();
-                } else {
-                    let clickedButton = $(this).attr("id");
-                    checkTurn(clickedButton);
-                }
-        })
-    }
-    
+        let clickedButton = $(this).attr("id");
+        checkTurn(clickedButton);     
+    }   
 });
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+$(document).on("keydown", function(evnt){
+    if (evnt.key.toLowerCase() === 'r'){
+        resetGame();
+    }
+})
   
