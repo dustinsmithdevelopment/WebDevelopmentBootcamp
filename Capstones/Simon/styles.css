@@ -50,32 +50,32 @@ h1 {
     opacity: 1;
 }
 
-.green {
-    background-color: #0f0;
+#green {
+    background-color: green;
     border-top-left-radius: 100%;
     top: 0;
     left: 0;
     margin: 10% 0 0 10%;
 }
 
-.red {
-    background-color: #f00;
+#red {
+    background-color: red;
     border-top-right-radius: 100%;
     top: 0;
     right: 0;
     margin: 10% 10% 0 0;
 }
 
-.yellow {
-    background-color: #ff0;
+#yellow {
+    background-color: yellow;
     border-bottom-left-radius: 100%;
     bottom: 0;
     left: 0;
     margin: 0 0 10% 10%;
 }
 
-.blue {
-    background-color: #00f;
+#blue {
+    background-color: blue;
     border-bottom-right-radius: 100%;
     bottom: 0;
     right: 0;
